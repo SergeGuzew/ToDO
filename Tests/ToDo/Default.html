@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ежедневник</title>
+
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <script src="Scripts/modernizr-2.6.2.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/respond.js"></script>
+    <script src="Scripts/ToDo.js"></script>
+
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container body-content">
+        <table id="ShowTable" class="table table-head-bordered">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>
+                        <h3>Мне нужно сделать...</h3>
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="ForShow">
+                <tr id="NewTask">
+                  <td></td>
+                  <td>
+                    <input type="text" onchange="addTask(this)" onkeydown="if (event.keyCode == 13) addTask(this);" />
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Задач в работе <span id="InWork">0</span> / Всего <span id="All">0</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <hr />
+        <footer>
+            <p>2017, KpXX</p>
+        </footer>
+    </div>
+</body>
+</html>
